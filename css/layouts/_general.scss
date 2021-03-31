@@ -256,7 +256,8 @@
 
 .button-primary{
     display: inline-block;
-    background-image: linear-gradient(to right, #aaaaff 0%, #fcbaf8 50%, #aaaaff 100%);
+    // background-image: linear-gradient(to right, #aaaaff 0%, #fcbaf8 50%, #aaaaff 100%);
+    background: #f0661c;
     background-size: 200% 100%;
     line-height: 2.5em;
     border-radius: 1.2em;
@@ -271,4 +272,7 @@
 }
 .color_or{
     color: $c1!important;
+}
+.text-decoration-underline{
+    text-decoration: underline;
 }

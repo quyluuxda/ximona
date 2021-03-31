@@ -254,8 +254,55 @@ jQuery(function ($) {
                     autoplaySpeed: 5000,
                     swipeToSlide: true,
                     infinite: true,
+                    accessibility: false,
                     speed: 1000,
                     responsive: [
+                    ],
+                })
+            }
+            if ($('.cas-lookbook').length) {
+                $('.cas-lookbook').slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: false,
+                    arrows: true,
+                    nextArrow: '<div class="smooth next"><div href="" class="view-more-primary fz16"><span><i class="fal fa-chevron-right"></i></span></div></div>',
+                    prevArrow: '<div class="smooth prev"><div href="" class="view-more-primary fz16"><span><i class="fal fa-chevron-left"></i></i></span></div></div>',
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    swipeToSlide: true,
+                    infinite: true,
+                    accessibility: false,
+                    speed: 1000,
+                    responsive: [{
+                        breakpoint: 767,
+                            settings: {
+                                slidesToShow: 1,
+                            }
+                        }
+                    ],
+                })
+            }
+            if ($('.cas-fm').length) {
+                $('.cas-fm').slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: false,
+                    arrows: true,
+                    nextArrow: '<div class="smooth next"><div href="" class="view-more-primary fz16"><span><i class="fal fa-chevron-right"></i></span></div></div>',
+                    prevArrow: '<div class="smooth prev"><div href="" class="view-more-primary fz16"><span><i class="fal fa-chevron-left"></i></i></span></div></div>',
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    swipeToSlide: true,
+                    infinite: true,
+                    accessibility: false,
+                    speed: 1000,
+                    responsive: [{
+                        breakpoint: 767,
+                            settings: {
+                                slidesToShow: 1,
+                            }
+                        }
                     ],
                 })
             }
@@ -513,106 +560,5 @@ jQuery(function ($) {
             $('header').removeClass('scroll');
         }
     });
-    if (win.width() < 768) {
-        $('.ft-item .title').click(function (event) {
-            $(this).next('.link-ft').stop().slideToggle();
-            $(this).children('i').toggleClass('fa-angle-down fa-angle-up');
-        });
-    }
-
-    // set margin
-    var wContainer = $('.container').width();
-    var wWindow = $(window).width();
-    var setMargin = ((wWindow - wContainer) / 2);
-    if ($(win).width() > 1199) {
-        $('.slideCount').css('right', setMargin);
-        win.resize(function (event) {
-            var wContainer = $('.container').width();
-            var wWindow = $(window).width();
-            var setMargin = ((wWindow - wContainer) / 2);
-            $('.slideCount').css('right', setMargin);
-        })
-    }
-
-    if ($(window).width() > 991) {
-        if ($('.stick').length > 0) {
-            $('.stick').stick_in_parent({
-                offset_top: 100,
-            });
-        }
-    }
 
 })
-if ($('#map').length) {
-    function initMap() {
-        var map, markers = [], infowindow;
-        var arr = [], item = $('.map-item');
-
-        item.each(function(index, el) {
-            var lat = Number($(el).attr('data-map').split(',')[0]);
-            var lng = Number($(el).attr('data-map').split(',')[1]);
-            var data = {
-                lat: lat,
-                lng: lng,
-                branch: "Toà nhà charmvit",
-                infodata: "117 Trần Duy Hưng, Cầu Giấy, Hà Nội",
-            }
-            arr.push(data);
-
-            $(el).click(function(e) {
-                e.preventDefault();
-                item.removeClass('act');
-                $(this).addClass('act');
-                var lat = Number($(this).attr('data-map').split(',')[0]);
-                var lng = Number($(this).attr('data-map').split(',')[1]);
-                // map.setCenter({lat: lat  ,lng: lng});
-                google.maps.event.trigger(markers[index],'click');
-            });
-        });
-
-        var m = document.getElementById('map');
-
-        if(m){
-            map = new google.maps.Map(m, {
-                zoom: 15,
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                mapTypeControl:false,
-                streetViewControl: false,
-            });
-            map.setCenter({lat: arr[0].lat  ,lng: arr[0].lng});
-
-            infowindow = new google.maps.InfoWindow({
-                maxWidth: 250,
-            });
-
-            function createMarker(latlng,html) {
-                var marker = new google.maps.Marker({
-                    position: latlng,
-                    map: map,
-                    icon: "images/icon.png",
-                });
-
-                google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.setContent(html);
-                    infowindow.open(map, marker);
-                });
-
-                return marker;          
-            }
-
-            for (var i = 0; i < arr.length; i++) {
-                var latlng = new google.maps.LatLng(arr[i].lat,arr[i].lng);
-                var html = '<p class="brand">'+arr[i].branch+'</p><p class="infor">'+arr[i].infodata+'</p>';
-                markers[i] = createMarker(latlng,html);
-            } 
-            google.maps.event.trigger(markers[0], 'click')
-        }
-    }
-
-    window.addEventListener('load',function(){
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAeERZGTMeCEHUw7dIEac2DPzJZUtv_PrU&callback=initMap';
-        document.body.appendChild(script);
-    });
-}
