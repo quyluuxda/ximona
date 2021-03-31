@@ -1,0 +1,256 @@
+.fz12 {
+    font-size: 12px;
+    @media (max-width: 1650px) {
+        font-size: 10px;
+    }
+}
+.fz14 {
+    font-size: 14px;
+    @media (max-width: 1599px) {
+        font-size: 12px;
+    }
+    @media (max-width: 1650px) {
+        font-size: 11px;
+    }
+}
+.fz15 {
+    font-size: 15px;
+    @media (max-width: 1650px) {
+        font-size: 14px;
+    }
+    @media (max-width: 767px) {
+        font-size: 12.5px;
+    }
+}
+.fz16 {
+    font-size: 16px;
+    @media (max-width: 1599px) {
+        font-size: 14.5px;
+    }
+    @media (max-width: 767px) {
+        font-size: 12.5px;
+    }
+}
+.fz17 {
+    font-size: 17px;
+    @media (max-width: 1599px) {
+        font-size: 15px;
+    }
+    @media (max-width: 767px) {
+        font-size: 13px;
+    }
+}
+.fz18 {
+    font-size: 18px;
+    @media (max-width: 1599px) {
+        font-size: 16px;
+    }
+    @media (max-width: 767px) {
+        font-size: 14px;
+    }
+}
+.fz20 {
+    font-size: 20px;
+    @media (max-width: 1650px) {
+        font-size: 16px;
+    }
+}
+.fz22 {
+    font-size: 22px;
+    @media (max-width: 1650px) {
+        font-size: 17px;
+    }
+}
+.fz24 {
+    font-size: 24px;
+    @media (max-width: 1650px) {
+        font-size: 19px;
+    }
+}
+.fz26 {
+    font-size: 26px;
+    @media (max-width: 1650px) {
+        font-size: 20px;
+    }
+}
+.fz28 {
+    font-size: 28px;
+    @media (max-width: 1650px) {
+        font-size: 22px;
+    }
+}
+.fz30 {
+    font-size: 30px;
+    @media (max-width: 1650px) {
+        font-size: 23px;
+    }
+}
+.fz32 {
+    font-size: 32px;
+    @media (max-width: 1650px) {
+        font-size: 25px;
+    }
+}
+.fz36 {
+    font-size: 36px;
+    @media (max-width: 1650px) {
+        font-size: 28px;
+    }
+}
+.fz40 {
+    font-size: 40px;
+    @media (max-width: 1650px) {
+        font-size: 31px;
+    }
+}
+.fz42 {
+    font-size: 42px;
+    @media (max-width: 1650px) {
+        font-size: 32px;
+    }
+}
+.fz46 {
+    font-size: 46px;
+    @media (max-width: 1650px) {
+        font-size: 35px;
+    }
+}
+.fz48 {
+    font-size: 48px;
+    @media (max-width: 1650px) {
+        font-size: 37px;
+    }
+}
+.fz50 {
+    font-size: 50px;
+    @media (max-width: 1650px) {
+        font-size: 38px;
+    }
+}
+.fz52 {
+    font-size: 52px;
+    @media (max-width: 1650px) {
+        font-size: 40px;
+    }
+}
+.fz58 {
+    font-size: 58px;
+    @media (max-width: 1650px) {
+        font-size: 45px;
+    }
+}
+.title-primary {
+    font-size: 56px;
+    @media (max-width: 1650px) {
+        font-size: 45px;
+    }
+    @media (max-width: 991px) {
+        font-size: 36px;
+    }
+    @media (max-width: 767px) {
+        font-size: 24px;
+    }
+}
+.fz60 {
+    font-size: 60px;
+    @media (max-width: 1650px) {
+        font-size: 46px;
+    }
+}
+.fz65 {
+    font-size: 65px;
+    @media (max-width: 1650px) {
+        font-size: 51px;
+    }
+}
+.fz72 {
+    font-size: 72px;
+    @media (max-width: 1650px) {
+        font-size: 48px;
+    }
+}
+.fz177 {
+    font-size: 177px;
+    @media (max-width: 1650px) {
+        font-size: 138px;
+    }
+}
+.link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.delay01 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+.delay02 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+.delay03 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.delay04 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+.delay05 {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.delay06 {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+.delay07 {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+.delay08 {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+.delay09 {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+.delay10 {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.delay12 {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.delay14 {
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+.delay16 {
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+.delay18 {
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+.animated.Tzoom {
+    animation-name: Tzoom;
+    animation-duration: 6s;
+}
+@keyframes Tzoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
