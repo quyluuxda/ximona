@@ -221,72 +221,41 @@ jQuery(function ($) {
             });
         },
         slider: function () {
-            var slideCount = $('.slideCount');
-            var slideBanner = $('.cas-home');
-            if (slideBanner.length) {
-                slideBanner.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-                    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-                    var i = (currentSlide ? currentSlide : 0) + 1;
-                    $(this).next('.slideCount').html('<b class="slideCountItem fz50">' + '0' + i + '</b>');
-                });
-                slideBanner.slick({
+            if ($('.cas-banner').length) {
+                $('.cas-banner').slick({
                     autoplay: true,
-                    speed: 1000,
-                    autoplaySpeed: 8000,
+                    speed: 2000,
+                    autoplaySpeed: 10000,
                     pauseOnHover: false,
                     swipeToSlide: true,
                     fade: true,
-                    // nextArrow: '<i class="fa fa-angle-right smooth next"></i>',
-                    // prevArrow: '<i class="fa fa-angle-left smooth prev"></i>',
-                    arrows: false,
-                    dots: false,
+                    nextArrow: '',
+                    prevArrow: '',
+                    arrows: true,
+                    dots: true,
                 })
-                FU.animate($(".cas-home .slick-current [data-animation ^= 'animated']"));
-                slideBanner.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                FU.animate($(".cas-banner .slick-current [data-animation ^= 'animated']"));
+                $('.cas-banner').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
                     if (currentSlide != nextSlide) {
                         var aniElm = $(this).find('.slick-slide[data-slick-index="' + nextSlide + '"]').find("[data-animation ^= 'animated']");
                         FU.animate(aniElm);
                     }
                 });
             }
-            if ($('.cas-partner').length) {
-                $('.cas-partner').slick({
-                    slidesToShow: 5,
-                    slidesToScroll: 5,
+            if ($('.cas-teach').length) {
+                $('.cas-teach').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     dots: false,
                     arrows: true,
-                    nextArrow: '<div class="smooth next"><div href="" class="view-more-primary fz16"><span><i class="fas fa-long-arrow-alt-right"></i></span></div></div>',
-                    prevArrow: '<div class="smooth prev"><div href="" class="view-more-primary fz16"><span><i class="fas fa-long-arrow-alt-left"></i></span></div></div>',
+                    nextArrow: '<div class="smooth next"><div href="" class="view-more-primary fz16"><span><i class="fal fa-chevron-right"></i></span></div></div>',
+                    prevArrow: '<div class="smooth prev"><div href="" class="view-more-primary fz16"><span><i class="fal fa-chevron-left"></i></i></span></div></div>',
                     autoplay: true,
                     autoplaySpeed: 5000,
                     swipeToSlide: true,
                     infinite: true,
                     speed: 1000,
                     responsive: [
-                        {
-                            breakpoint: 1599,
-                            settings: {
-                                slidesToShow: 5,
-                            }
-                        },
-                        {
-                            breakpoint: 1199,
-                            settings: {
-                                slidesToShow: 4,
-                            }
-                        },
-                        {
-                            breakpoint: 991,
-                            settings: {
-                                slidesToShow: 3,
-                            }
-                        },
-                        {
-                            breakpoint: 676,
-                            settings: {
-                                slidesToShow: 2,
-                            }
-                        }
                     ],
                 })
             }

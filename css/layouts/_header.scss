@@ -1,34 +1,29 @@
 header{
 	padding: 20px 0;
 	position: fixed;
-	z-index: 98;
 	width: 100%;
+	background: #fff;
 	top: 0;
 	left: 0;
+	z-index: 98;
 	transition: 0.4s;
 	&.scroll{
-		background-color: $c2;
 		padding: 10px 0;
 		box-shadow: 0 0 6px 0 rgba(#000,0.4);
 		.logo{
 			img{
-				max-height: 40px;
+				max-height: 50px;
 				@media (max-width: 1650px) {
-					max-height: 36px;
+					max-height: 45px;
 				}
 			}
-		}
-		.d-nav>ul>li>ul{
-			top: calc(100% + 10px);
 		}
 	}
 }
 
 .logo{
-	// opacity: 0;
-	// visibility: hidden;
 	img{
-		max-height: 48px;
+		max-height: 68px;
 		transition: 0.4s ease-in-out;
 	}
 	@media (max-width: 1650px) {
@@ -55,119 +50,13 @@ header{
 		>li{
 			display: inline-block;
 			margin: 0 30px;
-			>ul{
-				position: absolute;
-				overflow: hidden;
-				left: 0;
-				top: calc(100% + 20px);
-				padding: 7% 0;
-				background-color: $c2;
-				box-shadow: 0 2px 6px 0 rgba(#000,0.32);
-				width: 100%; 
-				min-height: 60vh;
-				border-radius: 10px;
-				transform-origin: 50% 0;
-				transform: scale(0);
-				opacity: 0;
-				transition: 0.5s ease-in-out;
-				z-index: 99;
-				@media (max-width: 1650px) {
-					top: calc(100% + 16px);
-				}
-				&:before{
-					content: '';
-					pointer-events: none;
-					position: absolute;
-					left: 0;
-					top: 0;
-					width: 50%;
-					height: 100%;
-					background-color: #17181c;
-				}
-				>li{
-					max-width: 50%;
-					padding: 0 10% 0 30%;
-					margin-bottom: 30px;
-					>ul{
-						position: absolute;
-						top: 0;
-						left: 50%;
-						width: 50%;
-						height: 100%;
-						padding: 7% 18% 7% 8%;
-						opacity: 0;
-						visibility: hidden;
-						transform: translateX(20px);
-						transition: 0.4s ease-in-out;
-						>li{
-							margin-bottom: 12px;
-							>a{
-								font-size: 18px;
-								@media (max-width: 1650px) {
-									font-size: 16px;
-								}
-							}
-						}
-					}
-					>a{
-						display: block;
-						padding: 5px 0;
-						font-weight: 500;
-						font-size: 14px;
-						text-transform: uppercase;
-						position: relative;
-						font-size: 20px;
-						@media (max-width: 1650px) {
-							font-size: 18px;
-						}
-						&:before{
-							content: '';
-							position: absolute;
-							left: 0;
-							top: calc(50%);
-							width: 0;
-							height: 2px;
-							background-color: $c1;
-							transition: 0.2s;
-						}
-						&:hover{
-							color: $c1;
-							padding-left: 15px;
-							&:before{
-								width: 10px;
-							}
-						}
-					}
-					&:hover{
-						>ul{
-							opacity: 1;
-							visibility: visible;
-							transform: translateX(0);
-						}
-					}
-					&.active{
-						>ul{
-							opacity: 1;
-							visibility: visible;
-							transform: translateX(0);
-						}
-						>a{
-							color: $c1;
-							padding-left: 15px;
-							&:before{
-								width: 10px;
-							}
-						}
-					}
-				}
-			}
 			&.active{
 				>a{
 					color: $c1;
 				}
 			}
 			>a{
-				font-weight: 500;
+				font-weight: bold;
 				text-transform: uppercase;
 				position: relative;
 				&:after{
@@ -198,12 +87,10 @@ header{
 .icon-menu{
 	display: none;
 }
+
 @media (max-width: 1650px) {
 	header{
 		padding: 16px 0;
-	}
-	.logo{
-		max-width: 212px;
 	}
 	.d-nav{
 		>ul>li{
@@ -217,10 +104,6 @@ header{
 		&.scroll{
 			padding: 10px 0;
 		}
-	}
-	.logo{
-		max-width: 90px;
-		
 	}
 	.d-nav{
 		display: none;
@@ -251,11 +134,4 @@ header{
 	}
 }
 @media (max-width: 991px) {
-}
-@media (max-width: 575px) {
-	.logo-mb{
-		img{
-			max-width: 50px;
-		}
-	}
 }

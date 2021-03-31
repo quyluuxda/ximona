@@ -254,3 +254,21 @@
     }
 }
 
+.button-primary{
+    display: inline-block;
+    background-image: linear-gradient(to right, #aaaaff 0%, #fcbaf8 50%, #aaaaff 100%);
+    background-size: 200% 100%;
+    line-height: 2.5em;
+    border-radius: 1.2em;
+    min-height: 2.5em;
+    padding: 0 1.5em;
+    color: #fff;
+    transition: 0.2s;
+    &:hover{
+        box-shadow: inset 0 0 0 100px rgb(0 0 0 / 20%);
+        color: #fff;
+    }
+}
+.color_or{
+    color: $c1!important;
+}

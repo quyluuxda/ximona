@@ -1,12 +1,12 @@
 @font-face {
-	font-family: 'Oswald';
-	src: url('../fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+	font-family: 'CaviarDreams';
+	src: url('../../fonts/VNF-Cariar Dreams Regular.ttf') format('truetype');
 	font-weight: 400;
 }
 @font-face {
-	font-family: 'Oswald';
-	src: url('../fonts/Oswald/Oswald-Medium.ttf') format('truetype');
-	font-weight: 500;
+	font-family: 'CaviarDreams';
+	src: url('../../fonts/UVF Caviar Dreams Bold.ttf') format('truetype');
+	font-weight: 700;
 }
 
 object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, 
@@ -200,24 +200,3 @@ img{max-width: 100%;vertical-align: middle;object-fit: cover;}
 // @include table();
 // @include s-social();
 // @include c-img();
-
-.hc-upload{
-	position: relative;
-	.hc-del{
-		position: absolute;
-		width: 24px;
-		height: 24px;
-		background: rgba(#000, 0.6);
-		color: #fff;
-		font-size: 21px;
-		line-height: 1;
-		text-align: center;
-		border-radius: 50%;
-		top: -12px;
-		right: -12px;
-		cursor: pointer;
-		&:hover{
-			background: rgba(#000, 0.85);
-		}
-	}
-}

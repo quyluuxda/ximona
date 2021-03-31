@@ -1,0 +1,194 @@
+.banner-head {
+	margin-top: 108px;
+	transition: 0.5s;
+	position: relative;
+}
+
+.cas-banner {
+    overflow: hidden;
+    .slick-dots {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 60px;
+        li {
+            display: none;
+            margin: 8px 0;
+            border: none;
+            background: #fff;
+            opacity: 0.3;
+            &.slick-active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.ct-banner-slider {
+	img {
+		height: 50vh;
+		width: 100%;
+		position: relative;
+	}
+	.content-banner-text {
+		.ct-banner {
+			position: absolute;
+			width: 30%;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 5;
+			.title-banner {
+				font-size: 48px;
+				text-transform: uppercase;
+				font-weight: 900;
+                line-height: 1;
+				margin-bottom: 0.3em;
+			}
+			p.desc-banner {
+				font-size: 20px;
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+}
+
+// block_book
+.block_book{
+    left: 50%;
+    top: 100%;
+    max-width: 545px;
+    padding: 20px 30px;
+    margin: 0 auto;
+    margin-bottom: -20px;
+    background: linear-gradient(180deg,#3d3b84,#3e3c58);
+    transform: translateY(-50%);
+    border-radius: 8px;
+    color: #fff;
+    .gp_input{
+        display: flex;
+        .form-group{
+            flex-grow: 1;
+        }
+    }
+    .tit_form_book{
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+    .gp_input{
+        margin-top: 15px;
+    }
+}
+
+// block_primary
+.block_primary{
+    padding: 45px 0;
+}
+
+.gr_tit_wrap{
+    max-width: 800px;
+}
+
+.if_email_phone{
+    li{
+        a{
+            display: block;
+            position: relative;
+            padding-left: 2rem;
+            i{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+// block_teacher
+.item-teach{
+    display: flex!important;
+    align-items: center;
+    .img{
+        flex: 0 0 auto;
+        width: 40%;
+        margin-right: 45px;
+    }
+}
+.gr_progess{
+    .progress{
+        border-radius: 0.5rem;
+    }
+    .item_progess{
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+        .progress-bar{
+            background: $c1;
+            border-radius: 0.5rem;
+        }
+    }
+}
+.cas-teach{
+    .slick-arrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2rem;
+        height: 2rem;
+        background: #f1f3f2;
+        transition: 0.3s;
+        &.next{
+            left: calc(100% + 45px);
+        }
+        &.prev{
+            right: calc(100% + 45px);
+        }
+        &:hover{
+            background: $c1;
+            color: #fff;
+        }
+    }
+}
+
+// block_course
+.item_course{
+    .img{
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        img{
+            width: 100%;
+            transition: 0.3s;
+        }
+        &:hover{
+            img{
+                transform: scale(1.03);
+            }
+        }
+    }
+    .ct{
+        padding: 25px 0 10px;
+        .tit_course{
+            position: relative;
+            margin-bottom: 15px;
+            @include set-line(1,1.5em);
+            &::after{
+                position: absolute;
+                content: '';
+                bottom: -3px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 50px;
+                height: 2px;
+                background: $c-text;
+            }
+        }
+        .desc_course{
+            @include set-line(2,1.5em)
+        }
+    }
+}
