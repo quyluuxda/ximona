@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @font-face {
   font-family: "CaviarDreams";
-  src: url("../../fonts/VNF-Cariar Dreams Regular.ttf") format("truetype");
+  src: url("../fonts/VNF-Cariar Dreams Regular.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "CaviarDreams";
-  src: url("../../fonts/UVF Caviar Dreams Bold.ttf") format("truetype");
+  src: url("../fonts/UVF Caviar Dreams Bold.ttf") format("truetype");
   font-weight: 700;
 }
 object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img,
